@@ -1,18 +1,9 @@
+/* Return max number of identical substrings from a string
+ */
 
 
+public class Answer1_1 {   
 
-public class Answer {   
-    public static void main(String[] args){
-       Answer test = new Answer();
-       System.out.println(test.answer("aba"));
-       System.out.println(test.answer("abaaba"));
-       System.out.println(test.answer("abaabaaba"));
-       System.out.println(test.answer("ababababa"));
-       System.out.println(test.answer("aaaaaaaaa"));
-       System.out.println(test.answer("aba"));
-       System.out.println(test.answer("aba"));
-       System.out.println(test.answer("aba"));
-    }
     public static int answer(String s) { 
        int amount = 1;
        int length = s.length();
@@ -23,7 +14,6 @@ public class Answer {
            }
            int split = s.length()/j; //lenght of individual slice
            String part1 = s.substring(0,split);
-           System.out.println(part1);
            valid = checkOthers(part1,split,j,s);
            if(valid == false){
                continue;
